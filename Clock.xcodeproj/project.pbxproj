@@ -13,6 +13,7 @@
 		ABB30A122CB78E1400D64E8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB30A112CB78E1400D64E8B /* Assets.xcassets */; };
 		ABB30A152CB78E1400D64E8B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = ABB30A142CB78E1400D64E8B /* Base */; };
 		ABB30A1D2CB7947500D64E8B /* WorldClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB30A1C2CB7947500D64E8B /* WorldClockViewController.swift */; };
+		ABB30A202CB79C6200D64E8B /* WorldClockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB30A1F2CB79C6200D64E8B /* WorldClockTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		ABB30A142CB78E1400D64E8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABB30A162CB78E1400D64E8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABB30A1C2CB7947500D64E8B /* WorldClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockViewController.swift; sourceTree = "<group>"; };
+		ABB30A1F2CB79C6200D64E8B /* WorldClockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		ABB30A072CB78E1300D64E8B /* Clock */ = {
 			isa = PBXGroup;
 			children = (
+				ABB30A1E2CB79C4C00D64E8B /* Cell */,
 				ABB30A082CB78E1300D64E8B /* AppDelegate.swift */,
 				ABB30A0A2CB78E1300D64E8B /* SceneDelegate.swift */,
 				ABB30A0E2CB78E1300D64E8B /* Main.storyboard */,
@@ -65,6 +68,14 @@
 				ABB30A1C2CB7947500D64E8B /* WorldClockViewController.swift */,
 			);
 			path = Clock;
+			sourceTree = "<group>";
+		};
+		ABB30A1E2CB79C4C00D64E8B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				ABB30A1F2CB79C6200D64E8B /* WorldClockTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 				ABB30A1D2CB7947500D64E8B /* WorldClockViewController.swift in Sources */,
 				ABB30A092CB78E1300D64E8B /* AppDelegate.swift in Sources */,
 				ABB30A0B2CB78E1300D64E8B /* SceneDelegate.swift in Sources */,
+				ABB30A202CB79C6200D64E8B /* WorldClockTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
