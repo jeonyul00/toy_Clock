@@ -12,8 +12,9 @@ enum KoreanCity:String {
     case Paris
     case New_York
     case Tehran
+    case Vladivostok
     
-    func gerKoreaCity()->String{
+    func getKoreaCity()->String{
         switch self {
         case .Seoul:
             return "서울"
@@ -23,7 +24,10 @@ enum KoreanCity:String {
             return "뉴욕"
         case .Tehran:
             return "테헤란"
+        case .Vladivostok:
+            return "블라디보스토크"
         }
+        
     }
     
 }
@@ -51,7 +55,12 @@ extension TimeZone {
     var city: String {
         let id = identifier
         let city = id.components(separatedBy: "/").last
-        return KoreanCity(rawValue: city!)!.gerKoreaCity()
+        
+        if let koreanCity = KoreanCity(rawValue: city ?? "") {
+            return koreanCity.getKoreaCity().replacingOccurrences(of: "_", with: "")
+        } else {
+            return city?.replacingOccurrences(of: "_", with: "") ?? "알 수 없음"
+        }
     }
     
     // 시차 반환

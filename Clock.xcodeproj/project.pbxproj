@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB3D874A2CBC100F008C89C2 /* CitySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D87492CBC100F008C89C2 /* CitySelectionViewController.swift */; };
+		AB3D874C2CBC111A008C89C2 /* String+Hangeul.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D874B2CBC111A008C89C2 /* String+Hangeul.swift */; };
 		ABB30A092CB78E1300D64E8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB30A082CB78E1300D64E8B /* AppDelegate.swift */; };
 		ABB30A0B2CB78E1300D64E8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB30A0A2CB78E1300D64E8B /* SceneDelegate.swift */; };
 		ABB30A102CB78E1300D64E8B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = ABB30A0F2CB78E1300D64E8B /* Base */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB3D87492CBC100F008C89C2 /* CitySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionViewController.swift; sourceTree = "<group>"; };
+		AB3D874B2CBC111A008C89C2 /* String+Hangeul.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Hangeul.swift"; sourceTree = "<group>"; };
 		ABB30A052CB78E1300D64E8B /* Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB30A082CB78E1300D64E8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABB30A0A2CB78E1300D64E8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 				ABB30A0A2CB78E1300D64E8B /* SceneDelegate.swift */,
 				ABB30A1C2CB7947500D64E8B /* WorldClockViewController.swift */,
 				ABB30A0E2CB78E1300D64E8B /* Main.storyboard */,
+				AB3D87492CBC100F008C89C2 /* CitySelectionViewController.swift */,
 				ABB30A112CB78E1400D64E8B /* Assets.xcassets */,
 				ABB30A132CB78E1400D64E8B /* LaunchScreen.storyboard */,
 				ABB30A162CB78E1400D64E8B /* Info.plist */,
@@ -85,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				ABB30A222CB7B95200D64E8B /* TimeZone+Util.swift */,
+				AB3D874B2CBC111A008C89C2 /* String+Hangeul.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -163,7 +169,9 @@
 				ABB30A232CB7B95200D64E8B /* TimeZone+Util.swift in Sources */,
 				ABB30A1D2CB7947500D64E8B /* WorldClockViewController.swift in Sources */,
 				ABB30A092CB78E1300D64E8B /* AppDelegate.swift in Sources */,
+				AB3D874C2CBC111A008C89C2 /* String+Hangeul.swift in Sources */,
 				ABB30A0B2CB78E1300D64E8B /* SceneDelegate.swift in Sources */,
+				AB3D874A2CBC100F008C89C2 /* CitySelectionViewController.swift in Sources */,
 				ABB30A202CB79C6200D64E8B /* WorldClockTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

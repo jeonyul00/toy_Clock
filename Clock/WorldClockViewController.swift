@@ -16,6 +16,7 @@ class WorldClockViewController: UIViewController {
         TimeZone(identifier: "Europe/Paris")!,
         TimeZone(identifier: "America/New_York")!,
         TimeZone(identifier: "Asia/Tehran")!,
+        TimeZone(identifier: "Asia/Vladivostok")!,
     ]
     
     override func viewDidLoad() {

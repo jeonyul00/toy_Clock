@@ -91,7 +91,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="세계 시계" id="3NS-OT-aP6">
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="GlP-Gb-d2n"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="10x-fi-6ey"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="10x-fi-6ey">
+                            <connections>
+                                <segue destination="sXa-Cn-Ttj" kind="presentation" id="PB0-16-BFb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="jL2-9y-Hff" id="qpZ-sE-XFM"/>
@@ -100,6 +104,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="taG-T4-WiD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1092.3664122137404" y="421.83098591549299"/>
+        </scene>
+        <!--City Selection View Controller-->
+        <scene sceneID="7ou-t8-2ow">
+            <objects>
+                <viewController id="tpr-lm-0bi" customClass="CitySelectionViewController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a5e-yg-Nss">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UyJ-Ht-kzr">
+                                <rect key="frame" x="0.0" y="90" width="393" height="752"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cityCell" textLabel="nKr-cU-tab" style="IBUITableViewCellStyleDefault" id="ceP-bj-W4O">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="44.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ceP-bj-W4O" id="hpn-5X-0uG">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nKr-cU-tab">
+                                                    <rect key="frame" x="20" y="0.0" width="353" height="44.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="tpr-lm-0bi" id="4hj-QF-xo5"/>
+                                    <outlet property="delegate" destination="tpr-lm-0bi" id="pWh-Tb-JaJ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jYV-av-dcL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jYV-av-dcL" firstAttribute="bottom" secondItem="UyJ-Ht-kzr" secondAttribute="bottom" id="LCi-Kt-rB9"/>
+                            <constraint firstItem="jYV-av-dcL" firstAttribute="trailing" secondItem="UyJ-Ht-kzr" secondAttribute="trailing" id="gMl-D8-UDc"/>
+                            <constraint firstItem="UyJ-Ht-kzr" firstAttribute="leading" secondItem="jYV-av-dcL" secondAttribute="leading" id="lNk-yd-H3Y"/>
+                            <constraint firstItem="UyJ-Ht-kzr" firstAttribute="top" secondItem="jYV-av-dcL" secondAttribute="top" id="r0V-yb-Cbn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" prompt="도시 추가" id="WRf-ll-9zP"/>
+                    <connections>
+                        <outlet property="tableView" destination="UyJ-Ht-kzr" id="uUk-hk-ILH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="McQ-Ix-OiZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="685" y="422"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QLT-dy-28Q">
@@ -138,18 +196,36 @@
             </objects>
             <point key="canvasLocation" x="-1956.4885496183206" y="421.83098591549299"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pXB-Hz-kz9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sXa-Cn-Ttj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cf7-cI-IM4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tpr-lm-0bi" kind="relationship" relationship="rootViewController" id="TIj-Dx-u8w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Wl-03-QEA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-185.49618320610685" y="421.83098591549299"/>
+        </scene>
     </scenes>
     <color key="tintColor" systemColor="systemOrangeColor"/>
     <resources>
         <image name="globe" catalog="system" width="128" height="123"/>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
