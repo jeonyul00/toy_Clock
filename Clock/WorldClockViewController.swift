@@ -17,6 +17,8 @@ class WorldClockViewController: UIViewController {
         TimeZone(identifier: "Asia/Vladivostok")!,
     ]
     
+    var timer: Timer?
+    
     // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,28 @@ class WorldClockViewController: UIViewController {
             }
         }
         self.navigationItem.leftBarButtonItem = editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] _ in
+            guard let self = self, Date.now.minuteChanged else { return }
+            
+            for cell in self.tableView.visibleCells {
+                guard let clockCell = cell as? WorldClockTableViewCell else { return }
+                guard let indexPath = self.tableView.indexPath(for: cell) else { return }
+                let target = list[indexPath.row]
+                clockCell.timeLabel.text = target.currentTime
+                clockCell.timePeriodLabel.text = target.timePeriod
+                clockCell.timeOffCellLabel.text = target.timeOffset
+            }
+        })
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        timer?.invalidate()
+        timer = nil
     }
     
     
