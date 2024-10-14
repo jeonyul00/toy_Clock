@@ -8,7 +8,7 @@
 import UIKit
 
 class WorldClockViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var list = [
@@ -23,9 +23,15 @@ class WorldClockViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-    }
-    
-    
+        
+        NotificationCenter.default.addObserver(forName: .timeZoneDidSelect, object: nil, queue: .main) { [weak self]  noti in
+            guard let self = self, let timeZone = noti.userInfo?["timeZone"] as? TimeZone else { return }
+            if !list.contains(timeZone) {
+                self.list.append(timeZone)
+                self.tableView.reloadData()
+            }
+        }
+    }    
 }
 
 extension WorldClockViewController:UITableViewDataSource, UITableViewDelegate {

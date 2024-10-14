@@ -113,6 +113,17 @@ extension CitySelectionViewController: UITableViewDelegate, UITableViewDataSourc
             return $0.title.uppercased() == title.uppercased()
         } ?? 0
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let target = filteredList[indexPath.section].items[indexPath.row] as Item
+        NotificationCenter.default.post(name: .timeZoneDidSelect, object: nil, userInfo: ["timeZone": target.timeZone ])
+        self.dismiss(animated: true)
+    }
+}
+
+// MARK: - notification
+extension Notification.Name {
+    static let timeZoneDidSelect = Notification.Name(rawValue: "timeZoneDidSelect")
 }
 
 // MARK: - searchBar
