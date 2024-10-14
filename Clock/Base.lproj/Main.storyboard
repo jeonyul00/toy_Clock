@@ -28,18 +28,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="132"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQH-w9-Y3x">
-                                                    <rect key="frame" x="256" y="30.333333333333336" width="121" height="71.666666666666657"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWg-b3-Vp7">
-                                                    <rect key="frame" x="189" y="55" width="59" height="40.666666666666657"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="exd-ds-rfK">
                                                     <rect key="frame" x="16" y="46" width="93" height="46.666666666666657"/>
                                                     <subviews>
@@ -57,6 +45,18 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQH-w9-Y3x">
+                                                    <rect key="frame" x="256" y="30.333333333333336" width="121" height="71.666666666666657"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWg-b3-Vp7">
+                                                    <rect key="frame" x="189" y="55" width="59" height="40.666666666666657"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="LQH-w9-Y3x" secondAttribute="trailing" constant="16" id="4A1-Yq-r3d"/>
@@ -71,7 +71,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="spacingContaint" destination="e1o-S8-sXM" id="ku7-m1-hqF"/>
                                             <outlet property="timeLabel" destination="LQH-w9-Y3x" id="Qp4-BZ-eTb"/>
+                                            <outlet property="timeLabelTrailingConstaint" destination="4A1-Yq-r3d" id="ynJ-LR-hh5"/>
                                             <outlet property="timeOffCellLabel" destination="0te-vc-Hd0" id="ifZ-kJ-HMU"/>
                                             <outlet property="timePeriodLabel" destination="vWg-b3-Vp7" id="iwB-SA-qpR"/>
                                             <outlet property="timeZoneLabel" destination="uKb-xf-VeN" id="jgA-SG-bMd"/>
