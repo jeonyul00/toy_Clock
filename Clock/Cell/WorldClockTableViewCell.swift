@@ -31,7 +31,8 @@ class WorldClockTableViewCell: UITableViewCell {
     // tableView에서 편집 상태가 바뀔 때 마다 호출
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
-                
+        
+        // 스와이프인지 edit인지
         if (self.superview as? UITableView) == nil { return }
         
         UIView.animate(withDuration: 0.4, animations: {
